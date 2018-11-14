@@ -50,6 +50,13 @@ export class SafeService {
         itemSize: 3,
         active: true,
         activeSince: new Date()
+      },
+      {
+        id: '3',
+        value: 0,
+        itemSize: 0,
+        active: false,
+        activeSince: new Date()
       }
     ] as Safe[]);
   }

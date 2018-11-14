@@ -2,10 +2,19 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HeaderWithSidenavComponent } from './components/header-with-sidenav/header-with-sidenav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import {
+  MatToolbarModule,
+  MatButtonModule,
+  MatSidenavModule,
+  MatIconModule,
+  MatListModule,
+  MatTableModule,
+  MatTooltipModule
+} from '@angular/material';
+import { SafeListComponent } from './components/safe-list/safe-list.component';
 
 @NgModule({
-  declarations: [HeaderWithSidenavComponent],
+  declarations: [HeaderWithSidenavComponent, SafeListComponent],
   imports: [
     CommonModule,
     LayoutModule,
@@ -13,8 +22,10 @@ import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, Mat
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatTableModule,
+    MatTooltipModule
   ],
-  exports: [CommonModule, HeaderWithSidenavComponent]
+  exports: [CommonModule, HeaderWithSidenavComponent, SafeListComponent]
 })
 export class SharedModule {}
