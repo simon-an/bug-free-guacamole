@@ -1,0 +1,18 @@
+<h1>Please insert name and price of the new item</h1>
+<form (ngSubmit)="onSubmit()">
+  <div>
+    <mat-form-field>
+      <input required placeholder="name" name="name" matInput [(ngModel)]="model.name" />
+      <mat-error>Name of item is required</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input required #price="ngModel" placeholder="price" pattern="[0-9]*" name="price" matInput [(ngModel)]="model.price" />
+      <mat-error *ngIf="price?.errors?.required">Price of item is required</mat-error>
+      <mat-error *ngIf="price?.errors?.pattern">Price can ony be a number</mat-error>
+      <span matPrefix>€&nbsp;</span>
+      <span matSuffix>.00</span>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </div>
+</form>
+{{ model | json }}

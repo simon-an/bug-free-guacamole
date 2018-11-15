@@ -20,7 +20,7 @@ export class SafeService {
   }
 
   getItems(safeId: string): Observable<SafeItem[]> {
-    this.items.next(null);
+    this.items.next([]);
     setTimeout(() => {
       if (safeId === '1') {
         this.items.next([
@@ -62,5 +62,10 @@ export class SafeService {
         activeSince: new Date()
       }
     ] as Safe[]);
+  }
+
+  addItem(item: SafeItem): any {
+    const newItems = [...this.items.getValue(), item];
+    this.items.next(newItems);
   }
 }
