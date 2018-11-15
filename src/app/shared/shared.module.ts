@@ -12,12 +12,16 @@ import {
   MatTooltipModule
 } from '@angular/material';
 import { SafeListComponent } from './components/safe-list/safe-list.component';
+import { SafeComponent } from './containers/safe/safe.component';
+import { RouterModule } from '@angular/router';
+import { ItemListComponent } from './components/item-list/item-list.component';
 
 @NgModule({
-  declarations: [HeaderWithSidenavComponent, SafeListComponent],
+  declarations: [HeaderWithSidenavComponent, SafeListComponent, SafeComponent, ItemListComponent],
   imports: [
     CommonModule,
     LayoutModule,
+    RouterModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
@@ -26,6 +30,6 @@ import { SafeListComponent } from './components/safe-list/safe-list.component';
     MatTableModule,
     MatTooltipModule
   ],
-  exports: [CommonModule, HeaderWithSidenavComponent, SafeListComponent]
+  exports: [CommonModule, HeaderWithSidenavComponent, SafeListComponent, SafeComponent, ItemListComponent]
 })
 export class SharedModule {}

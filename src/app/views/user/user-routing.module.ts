@@ -1,3 +1,4 @@
+import { SafeComponent } from './../../shared/containers/safe/safe.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { UserComponent } from './user/user.component';
@@ -11,6 +12,10 @@ const routes: Routes = [
   {
     path: 'safes',
     component: UserSafesComponent
+  },
+  {
+    path: 'safes/:id',
+    component: SafeComponent
   }
 ];
 
