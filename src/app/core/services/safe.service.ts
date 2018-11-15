@@ -23,11 +23,14 @@ export class SafeService {
     this.items.next(null);
     setTimeout(() => {
       if (safeId === '1') {
-        this.items.next([{ id: '1', name: 'Fahrrad' }, { id: '2', name: 'Laptop' }] as SafeItem[]);
+        this.items.next([
+          { id: '1', name: 'Fahrrad', price: 999 },
+          { id: '2', name: 'Laptop', price: 123 }
+        ] as SafeItem[]);
       } else if (safeId === '2') {
         this.items.next([
           { id: '3', name: 'Taschenrechner' },
-          { id: '4', name: 'Sonnenbrille' },
+          { id: '4', name: 'Sonnenbrille', price: 40 },
           { id: '5', name: 'Brille' }
         ] as SafeItem[]);
       }

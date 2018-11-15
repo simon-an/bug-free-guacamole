@@ -12,4 +12,8 @@ export class ItemListComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
+
+  onAddSafeItem(clickEvent) {
+    console.log(clickEvent);
+  }
 }

@@ -7,9 +7,19 @@
     </mat-nav-list>
   </ng-container>
   <!-- Content -->
-  <mat-list body>
-    <h3 mat-subheader>Items</h3>
-    <mat-list-item *ngFor="let item of items">{{ item?.name }}</mat-list-item>
-  </mat-list>
+  <ng-container body>
+    <header>
+      <h4 mat-subheader>Items</h4>
+      <button mat-mini-fab color="primary" (click)="onAddSafeItem($event)">
+        <mat-icon aria-label="Example icon-button with a add icon">add</mat-icon>
+      </button>
+    </header>
+    <mat-list>
+      <mat-list-item *ngFor="let item of items">
+        <p matLine>{{ item?.name }}</p>
+        <p matLine>{{ item?.price }}€</p>
+      </mat-list-item>
+    </mat-list>
+  </ng-container>
   <!---->
 </cool-header-with-sidenav>
