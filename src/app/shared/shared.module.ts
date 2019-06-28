@@ -12,7 +12,8 @@ import {
   MatTooltipModule,
   MatDialogModule,
   MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
+  MatSelectModule
 } from '@angular/material';
 import { SafeListComponent } from './components/safe-list/safe-list.component';
 import { SafeComponent } from './containers/safe/safe.component';
@@ -21,6 +22,8 @@ import { ItemListComponent } from './components/item-list/item-list.component';
 import { AddSafeItemDialogComponent } from './containers/add-safe-item-dialog/add-safe-item-dialog.component';
 import { SafeItemFormComponent } from './components/safe-item-form/safe-item-form.component';
 import { FormsModule } from '@angular/forms';
+import { LoginDialogComponent } from './containers/login-dialog/login-dialog.component';
+import { LoginComponent } from './containers/login/login.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import { FormsModule } from '@angular/forms';
     SafeComponent,
     ItemListComponent,
     AddSafeItemDialogComponent,
-    SafeItemFormComponent
+    SafeItemFormComponent,
+    LoginDialogComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,
@@ -45,9 +50,10 @@ import { FormsModule } from '@angular/forms';
     MatDialogModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatSelectModule
   ],
-  entryComponents: [AddSafeItemDialogComponent],
+  entryComponents: [AddSafeItemDialogComponent, LoginDialogComponent],
   exports: [
     CommonModule,
     HeaderWithSidenavComponent,
@@ -55,7 +61,9 @@ import { FormsModule } from '@angular/forms';
     SafeComponent,
     ItemListComponent,
     AddSafeItemDialogComponent,
-    SafeItemFormComponent
+    SafeItemFormComponent,
+    LoginDialogComponent,
+    LoginComponent
   ]
 })
 export class SharedModule {}
